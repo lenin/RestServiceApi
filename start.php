@@ -19,5 +19,6 @@ require_once __DIR__.'/libraries/utility.php';
 
 Autoloader::map(array(
     'Api_Controller' 		=> path('bundle').'rest_service_api/libraries/api_controller.php',
+    'Api_Crud_Controller' 	=> path('bundle').'rest_service_api/libraries/api_crud_controller.php',
     'Api' 		            => path('bundle').'rest_service_api/libraries/api.php',
 ));

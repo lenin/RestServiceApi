@@ -30,7 +30,7 @@ class Api {
 
     public static function parameters_check($rules = null)
     {
-        $request = \Laravel\Input::all();
+        $request = (array) \Laravel\Input::json();
         if(is_array($rules))
         {
             $validation = Validator::make($request, $rules);

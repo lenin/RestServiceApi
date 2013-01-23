@@ -88,3 +88,10 @@ if(Config::get('rest_service_api::api.enable_api_docs', true))
         }
     });
 }
+
+Route::filter('require_model_class', function($model_class)
+{
+    if (is_null($model_class)) {
+        throw new Exception('model_class is required');
+    }
+});
